@@ -12,8 +12,8 @@
         <h1 class="text-center">Circuitous File Size</h1>
       </div>
       <div class="row">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-6 text-center">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-6 text-center">
           <h2>Upload A File</h2>
           <br />
           <!-- <form enctype="multipart/form-data" method="post" action"/api/fileanalyse>
@@ -22,12 +22,16 @@
             </span>
           </form> -->
           <form id="uploadForm"
+            class="form-group"
             enctype="multipart/form-data"
             action="/api/fileanalyse"
             method="post"
           >
-            <input type="file" name="thing" />
-            <input type="submit" value="Upload Image" name="submit">
+            <div class="btn btn-default btn-file">
+              Choose File<input type="file" name="thing" />
+            </div>
+            <br />
+            <input class="form-control btn-primary" type="submit" value="Upload Image" name="submit">
           </form>
         </div>
       </div>
@@ -52,6 +56,9 @@
         background: white;
         cursor: inherit;
         display: block;
+    }
+    .btn-primary {
+      margin-top: 10px;
     }
     </style>
 

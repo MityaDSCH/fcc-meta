@@ -13,7 +13,9 @@ app.route('/').get(function(req, res) {
 });
 
 app.post('/api/fileanalyse', upload.single('thing'), function(req, res) {
-  console.log(req.file);
+  res.json({
+    size: req.file.size
+  });
 });
 
 app.listen(process.env.PORT || 8080, function() {
