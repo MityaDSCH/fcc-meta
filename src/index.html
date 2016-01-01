@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>FCC Timestamp</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="container-fluid"  style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;">
+      <div class="page-header" style="position:fixed;top:0;width:100%;">
+        <h1 class="text-center">Circuitous File Size</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6 text-center">
+          <h2>Upload A File</h2>
+          <br />
+          <!-- <form enctype="multipart/form-data" method="post" action"/api/fileanalyse>
+            <span class="btn btn-primary btn-file">
+              Upload <input type="file">
+            </span>
+          </form> -->
+          <form id="uploadForm"
+            enctype="multipart/form-data"
+            action="/api/fileanalyse"
+            method="post"
+          >
+            <input type="file" name="thing" />
+            <input type="submit" value="Upload Image" name="submit">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <style>
+    .btn-file {
+        position: relative;
+        overflow: hidden;
+    }
+    .btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+    }
+    </style>
+
+  </body>
+
+</html>
